@@ -7,6 +7,7 @@ class CreateBookings < ActiveRecord::Migration[6.0]
       t.string :party_type
       t.time :start_time
       t.time :end_time
+      t.date :date
       t.integer :total_price
 
       t.timestamps
