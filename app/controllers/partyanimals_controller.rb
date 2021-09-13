@@ -1,18 +1,18 @@
-class PartyanimalsController < ApplicationController
+class PartyAnimalsController < ApplicationController
   def index
-    @partyanimals = Partyanimal.all
+    @partyanimals = PartyAnimal.all
   end
 
   def new
-    @partyanimal = Partyanimal.new
+    @partyanimal = PartyAnimal.new
   end
 
   def create
-    @partyanimal = Partyanimal.new(list_params)
+    @partyanimal = PartyAnimal.new(list_params)
   end
 
   def show
-    @partyanimal = Partyanimal.find(params[:id])
+    @partyanimal = PartyAnimal.find(params[:id])
   end
 
 private
