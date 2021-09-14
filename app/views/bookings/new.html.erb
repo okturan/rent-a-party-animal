@@ -1,23 +1,24 @@
 <div class = "container">
 
-<h1><%= 'Create a Booking' %></h1>
+  <h1>Create a Booking for <%= link_to @party_animal.name, party_animal_path(@party_animal) %></h1>
 
-<%= simple_form_for [ @party_animal, @booking] do |f| %>
+  <%= simple_form_for [ @party_animal, @booking] do |f| %>
 
-  <div class="form-group col-md-4">
-    <label for="party_type">Party Type</label>
-    <select id="party_type" class="form-control">
-      <option selected>Choose...</option>
-      <option value="nerd">Nerdy</option>
-      <option value="poshe">Poshe</option>
-      <option value="business">Business</option>
-    </select>
-  </div>
-  <div class="form-group col-md-4">
-    <%= f.input :city %>
-  </div>
+    <div class="form-group col-md-4">
+      <label for="party_type">Party Type</label>
+      <select id="party_type" class="form-control">
+        <option selected>Choose...</option>
+        <option value="nerd">Nerdy</option>
+        <option value="poshe">Poshe</option>
+        <option value="business">Business</option>
+      </select>
 
-  <%= f.submit "Get this party started!", class: "btn btn-primary" %>
-<% end %>
+      <%= f.input :city %>
+      <%= f.input :start_time, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.input :end_time, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.submit "Get this party started!", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+
+  <%#= link_to "Dashboard", dashboard_path %>
 </div>
-<%= link_to "Bookings", bookings_path %>
