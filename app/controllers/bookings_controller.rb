@@ -11,6 +11,7 @@ class BookingsController < ApplicationController
     @party_animal = PartyAnimal.find(params[:party_animal_id])
     @booking.party_animal = @party_animal
     @booking.user = current_user
+    @booking.total_price = total_price
     @booking.save
 
     redirect_to dashboard_path
@@ -19,11 +20,14 @@ class BookingsController < ApplicationController
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
-    render :index
-    # redirect_to party_animal_path(@booking.party_animal)
+    redirect_to dashboard_path
   end
 
   private
+
+  def total_price
+    ((@booking.end_time - @booking.start_time) / 3600) * @party_animal.price
+  end
 
   def booking_params
     params.require(:booking).permit(:city, :party_type, :start_time, :end_time, :date, :total_price)
