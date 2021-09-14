@@ -19,6 +19,7 @@ class BookingsController < ApplicationController
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
+    render :index
     # redirect_to party_animal_path(@booking.party_animal)
   end
 
