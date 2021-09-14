@@ -7,7 +7,7 @@ class PartyAnimalsController < ApplicationController
     @partyanimal = PartyAnimal.new(list_params)
     @partyanimal.user = current_user
     @partyanimal.save
-    redirect_to party_animals_path
+    redirect_to dashboard_path
   end
 
   def show

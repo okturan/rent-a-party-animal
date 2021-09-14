@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.save
 
-    redirect_to bookings_path(@party_animal)
+    redirect_to dashboard_path
   end
 
   def destroy
