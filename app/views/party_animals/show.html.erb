@@ -1,0 +1,20 @@
+<div class='container'>
+
+<div class="card-trip">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <div class="card-trip-infos">
+    <div>
+    <h1><%= @partyanimal.name %> </h1>
+    <h2><%= @partyanimal.age %> </h2>
+    <h3><%= @partyanimal.main_interest %> </h3>
+    <h3><%= @partyanimal.secondary_interest %> </h3>
+    <p><%= @partyanimal.description %> </p>
+    </div>
+    <h2 class="card-trip-pricing"> <%= @partyanimal.price %></h2>
+    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+  </div>
+</div>
+<%= link_to "New Booking", new_party_animal_booking_path(@partyanimal) %>
+
+</div>
+    <%#booking = Booking.find_by(user: user, partyanimal: @partyanimal) %>
