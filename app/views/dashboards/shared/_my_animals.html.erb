@@ -1,0 +1,10 @@
+<div class='container'>
+  <% @partyanimals.each do |partyanimal| %>
+    <div class="card-product">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-product-infos">
+        <%= link_to partyanimal.name, party_animal_path(partyanimal) %>
+      </div>
+    </div>
+  <% end %>
+</div>

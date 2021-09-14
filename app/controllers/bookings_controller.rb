@@ -1,8 +1,4 @@
 class BookingsController < ApplicationController
-  def index
-    @bookings = Booking.all
-  end
-
   def new
     # we need @party_animal in our `simple_form_for`
     @party_animal = PartyAnimal.find(params[:party_animal_id])
