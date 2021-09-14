@@ -1,8 +1,4 @@
 class PartyAnimalsController < ApplicationController
-  def index
-    @partyanimals = PartyAnimal.all
-  end
-
   def new
     @partyanimal = PartyAnimal.new
   end

@@ -1,6 +1,23 @@
-<%= simple_form_for [ @party_animal, @booking] do |f| %>
-  <%= f.input :party_type %>
+<div class = "container">
 
-  <%= f.submit "Submit review", class: "btn btn-primary" %>
+<h1><%= 'Create a Booking' %></h1>
+
+<%= simple_form_for [ @party_animal, @booking] do |f| %>
+
+  <div class="form-group col-md-4">
+    <label for="party_type">Party Type</label>
+    <select id="party_type" class="form-control">
+      <option selected>Choose...</option>
+      <option value="nerd">Nerdy</option>
+      <option value="poshe">Poshe</option>
+      <option value="business">Business</option>
+    </select>
+  </div>
+  <div class="form-group col-md-4">
+    <%= f.input :city %>
+  </div>
+
+  <%= f.submit "Get this party started!", class: "btn btn-primary" %>
 <% end %>
- <%# eksik form!!!:city, :start_time, :end_time, :date, :total_price yok  %>
+</div>
+<%= link_to "Bookings", bookings_path %>
