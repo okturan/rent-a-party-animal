@@ -9,6 +9,9 @@ class PartyAnimalsController < ApplicationController
 
   def create
     @partyanimal = PartyAnimal.new(list_params)
+    @partyanimal.user = current_user
+    @partyanimal.save
+    redirect_to party_animals_path
   end
 
   def show
@@ -18,6 +21,6 @@ class PartyAnimalsController < ApplicationController
 private
 
   def list_params
-    params.require(:partyanimal).permit(:name)
+    params.require(:party_animal).permit(:name, :price, :description, :main_interest, :secondary_interest, :age)
   end
 end
