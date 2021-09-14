@@ -4,8 +4,11 @@
 <% @bookings.each do |booking| %>
 
  <%=booking.city%>
+     <%= link_to booking_path(booking), method: :delete, data: { confirm: "Delete #{booking} from your tasks list?" } do %>
+    <i class="far fa-trash-alt"></i>
+    <% end %>
 
-    <%#= link_to partyanimal.name, party_animal_path(partyanimal) %>
+    <%#= link_to party_animal.name, party_animal_path(party_animal) %>
 
   </div>
 
