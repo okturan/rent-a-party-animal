@@ -1,4 +1,10 @@
 class PartyAnimalsController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
+
+  def index
+    @partyanimals = PartyAnimal.all
+  end
+
   def new
     @partyanimal = PartyAnimal.new
   end
