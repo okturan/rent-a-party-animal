@@ -7,4 +7,5 @@ Rails.application.routes.draw do
     resources :bookings, only: [ :new, :create ]
   end
   resources :bookings, only: [ :destroy ]
+  resource :dashboard, only: :show
 end
