@@ -14,8 +14,10 @@ class BookingsController < ApplicationController
     # we need `party_animal_id` to associate booking with corresponding party_animal
     @party_animal = PartyAnimal.find(params[:party_animal_id])
     @booking.party_animal = @party_animal
+    @booking.user = current_user
     @booking.save
-    # redirect_to party_animal_path(@party_animal)
+
+    redirect_to bookings_path(@party_animal)
   end
 
   def destroy
