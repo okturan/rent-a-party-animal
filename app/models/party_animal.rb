@@ -6,5 +6,5 @@ class PartyAnimal < ApplicationRecord
   validates :main_interest, presence: true
   validates :age, presence: true, numericality: { only_integer: true }
   has_one_attached :avatar
-  PARTY_TYPES = ['Nerdy', 'Poshe', 'Business']
+  PARTY_TYPES = ['Nerdy', 'Posh', 'Business']
 end
