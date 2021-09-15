@@ -14,7 +14,10 @@
     <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
   </div>
 </div>
+
+<% if user_signed_in? %>
 <%= link_to "New Booking", new_party_animal_booking_path(@partyanimal) %>
+<% end %>
 
 </div>
     <%#booking = Booking.find_by(user: user, partyanimal: @partyanimal) %>
