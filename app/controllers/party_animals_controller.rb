@@ -23,6 +23,6 @@ class PartyAnimalsController < ApplicationController
 private
 
   def list_params
-    params.require(:party_animal).permit(:name, :price, :description, :main_interest, :secondary_interest, :age)
+    params.require(:party_animal).permit(:name, :price, :description, :main_interest, :secondary_interest, :age, :avatar)
   end
 end

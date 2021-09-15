@@ -1,7 +1,11 @@
 <div class='container'>
 
 <div class="card-trip">
+  <% if @partyanimal.avatar.attached? %>
+    <%= cl_image_tag @partyanimal.avatar.key %>
+  <% else %>
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <% end %>
   <div class="card-trip-infos">
     <div>
     <h1><%= @partyanimal.name %> </h1>
@@ -11,7 +15,7 @@
     <p> <%= @partyanimal.description %> </p>
     </div>
     <h2 class="card-trip-pricing"> <%= @partyanimal.price %> EUR </h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
   </div>
 </div>
 

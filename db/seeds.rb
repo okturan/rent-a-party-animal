@@ -23,8 +23,13 @@ puts "password: 123456"
     secondary_interest: Faker::Hobby.activity,
     price: rand(3..5),
     description: Faker::Marketing.buzzwords,
-    user_id: 1,
+    user_id: 1
   )
 end
+
+# PartyAnimal.all.each do |partyanimal|
+#     partyanimal.avatar.attach(URI.open(Faker::LoremPixel.image(size: "300x300", category: 'people')), filename: 'avatar.jpg')
+#     puts partyanimal
+# end
 
 puts "Created 20 unique party goers"
