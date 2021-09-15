@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
     @booking.total_price = total_price
     @booking.save
 
-    redirect_to dashboard_path
+  redirect_to dashboard_path
   end
 
   def destroy
@@ -30,6 +30,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:city, :party_type, :start_time, :end_time, :date, :total_price)
+    params.require(:booking).permit(:address, :party_type, :start_time, :end_time, :date, :total_price)
   end
 end
