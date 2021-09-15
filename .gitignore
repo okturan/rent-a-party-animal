@@ -41,4 +41,7 @@ yarn-debug.log*
 *.swp
 .DS_Store
 .env*
+<<<<<<< HEAD
+=======
 .env*
+>>>>>>> dfaae8b0c5da3392202fe75d31992ba9ceb89e55
