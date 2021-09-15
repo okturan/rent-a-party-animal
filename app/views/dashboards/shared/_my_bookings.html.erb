@@ -1,6 +1,18 @@
 <div class='container'>
+
   <% @bookings.each do |booking| %>
-    <%= booking.city %>
-    <%#= link_to partyanimal.name, party_animal_path(partyanimal) %>
+    <div class='booking-list'>
+    <h4><%= booking.party_type %></h4> <h4><%= booking.party_animal.name %></h4>
+    <h4><%= ((booking.end_time - booking.start_time) / 3600).to_i %></h4>
+    <h4>Address: <%= booking.address %></h4>
+    <h4>Total Price: <%= booking.total_price %>€</h4>
+    <%= link_to booking_path(booking), method: :delete, data: { confirm: "Delete this booking from your dashboard?" } do %>
+    <i class="far fa-trash-alt"></i>
+    <% end %>
+    </div>
+
+
+
   <% end %>
+
 </div>
