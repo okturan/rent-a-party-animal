@@ -2,7 +2,11 @@
   <div class="cards">
     <% @partyanimals.each do |partyanimal| %>
       <div class="card-product">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <% if partyanimal.avatar.attached? %>
+          <%= cl_image_tag partyanimal.avatar.key %>
+        <% else %>
+         <%= image_tag 'noavatar' %>
+        <% end %>
         <div class="card-product-infos">
           <%= link_to partyanimal.name, party_animal_path(partyanimal) %>
         </div>

@@ -5,4 +5,5 @@ class PartyAnimal < ApplicationRecord
   validates :price, presence: true, numericality: { only_integer: true }
   validates :main_interest, presence: true
   validates :age, presence: true, numericality: { only_integer: true }
+  has_one_attached :avatar
 end
