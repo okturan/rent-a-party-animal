@@ -26,7 +26,8 @@
       color: rgba(0, 0, 0, 0.678);
       text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
     }
-  font-size: 2rem;
+
+  font-size : clamp(1.5rem, 3vw, 2rem);
   font-weight: bolder;
   grid-area: animal;
   display: flex;
@@ -70,9 +71,9 @@
   background-color: white;
   background-size: cover;
   border-radius: 5px;
-  margin: 6%;
   column-gap: 4%;
   row-gap: 0.7rem;
+  margin-bottom: 5vmin;
 }
 
 .dropdown-menu {
@@ -83,3 +84,4 @@
 div.dropdown {
   display: inline;
 }
+

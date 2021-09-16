@@ -1,4 +1,9 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <% if current_page?(root_path) %>
+      <div class="navbar navbar-expand-sm navbar-dark navbar-lewagon">
+    <% else %>
+      <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <% end %>
+
   <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "party-animal-plain.png" %>
     <% end %>

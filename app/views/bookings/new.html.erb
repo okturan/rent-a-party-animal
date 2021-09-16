@@ -5,8 +5,8 @@
   <%= simple_form_for [ @party_animal, @booking] do |f| %>
     <%= f.input :party_type, collection: PartyAnimal::PARTY_TYPES %>
     <%= f.input :address, placeholder: "Cihangir, 34433 Beyoğlu İstanbul" %>
-    <%= f.input :start_time, as: :string, required: false, input_html: {class: "datepicker"} %>
-    <%= f.input :end_time, as: :string, required: false, input_html: {class: "datepicker"} %>
+    <%= f.input :start_time, as: :string, required: true, input_html: {class: "datepicker"} %>
+    <%= f.input :end_time, as: :string, required: true, input_html: {class: "datepicker"} %>
     <%= f.submit "Get this party started!", class: "btn btn-primary" %>
   <% end %>
 
