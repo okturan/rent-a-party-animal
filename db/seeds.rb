@@ -6,7 +6,7 @@
 #   movies  Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(
+user = User.create(
   email: "party@animal.com",
   password: "123456"
 )
@@ -33,3 +33,7 @@ end
 # end
 
 puts "Created 20 unique party goers"
+alissa = { name: "Alissa", age: 22, main_interest: "Dance Shows", secondary_interest: "Teaching how to dance like pro", description: "Do you wanna get everyone on the floor real fast?", price: 60, user_id: 1 }
+tom = { name: "Tom", age: 32, main_interest: "Small Talks", secondary_interest: "Networking", description: "Throwing a party full of total strangers and need an icebreaker for those early hours? You've got it!", price: 80, user_id: 1 }
+bijou = { name: "DJ Lil Bijou", age: 24, main_interest: "House, Techno and Indie Dance Mix", secondary_interest: "Cruise Ships & Private Parties", description: "Looking for a DJ that will rock the house?", price: 100, user_id: 1 }
+snake = { name: "Snake", age: 25, main_interest: "Pop, Dance, Burlesque, Ballroom", secondary_interest: "Weddings", description: "Get the party started!", price: 150, user_id: 1 }
