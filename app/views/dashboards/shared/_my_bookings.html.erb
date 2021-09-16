@@ -1,23 +1,37 @@
-<div class='container bookings-container'>
-  <div class='bookings-container'>
-    <div class='booking-list'>
-      <h2>Party Type</h2> 
-      <h2>Animal</h2>
-      <h2>Hours</h2>
-      <h2>Address</h2>
-      <h2>Total Price</h2>
-    </div>
-    <% @bookings.each do |booking| %>
-      <div class='booking-list'>
-        <h5><%= booking.party_type %></h5>
-        <h5><%= link_to booking.party_animal.name, party_animal_path(booking.party_animal) %></h5>
-        <h5><%= ((booking.end_time - booking.start_time) / 3600).to_i %></h5>
-        <h5><%= booking.address %></h5>
-        <h5><%= booking.total_price %>€</h5>
+
+<div class='bookings-grid'>
+  
+  <% @bookings.each do |booking| %>
+    <div class='booking-card'>
+
+      <div class='booking-type' style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <p><%= booking.party_type %></p>
+        <p>Party</p>
+      </div>
+
+      <div class='booking-animal'>
+        <p><%= link_to booking.party_animal.name, party_animal_path(booking.party_animal) %></p>
+      </div>
+
+      <div class='booking-hours'>
+        <p><%=((booking.end_time - booking.start_time) / 3600).to_i %> Hours</p>
+      </div>
+
+      <div class='booking-address'>
+      <p>Address</p>
+      <p><%= booking.address %></p>
+      </div>
+
+      <div class='booking-price'>
+        <p>Total Price: <%= booking.total_price %>€</p>
+      </div>
+
+      <div class='booking-actions'>
         <%= link_to booking_path(booking), method: :delete, data: { confirm: "Delete this booking from your dashboard?" } do %>
-        <i class="far fa-trash-alt"></i>
+          <i class="far fa-trash-alt fa-lg"></i>
         <% end %>
       </div>
-    <% end %>
-  </div>
+    </div>
+
+  <% end %>
 </div>

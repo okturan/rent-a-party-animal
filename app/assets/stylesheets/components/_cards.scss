@@ -60,7 +60,6 @@
   margin: 0;
 }
 
-
 .card-trip .card-trip-infos {
   padding: 16px;
   display: flex;
@@ -117,18 +116,3 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-
-.booking-list {
-  position: relative;
-  display: grid;
-  grid-template-columns: 2fr 2fr 2fr 2fr 3fr 1fr;
-  margin: 20px;
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  padding: 15px;
-  padding-left: 25px;
-  column-gap: 5vw;
-  justify-items: left;
-}
-
