@@ -1,6 +1,9 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  //position: fixed; // kart icin ekledim
+  //top: 0;          // bunu da
+ // z-index: 100;    // ama simdi hepsi sola yapisti
 }
 
 .navbar-lewagon .navbar-collapse {
