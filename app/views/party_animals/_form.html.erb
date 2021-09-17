@@ -1,0 +1,14 @@
+<div class='container'>
+<%= simple_form_for(@partyanimal) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :age %>
+  <%= f.input :main_interest %>
+  <%= f.input :secondary_interest %>
+  <%= f.input :price %>
+  <%= f.input :description, as: :text %>
+  <%= f.input :avatar,
+            as: :file,
+            required: true %>
+  <%= f.submit "Submit Party Animal", class: "btn btn-primary" %>
+  <% end %>
+  </div>
