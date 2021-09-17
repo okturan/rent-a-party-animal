@@ -1,16 +1,33 @@
-<div class='container'>
-  <div class="cards">
-    <% @partyanimals.each do |partyanimal| %>
-      <div class="card-product">
-        <% if partyanimal.avatar.attached? %>
-          <%= cl_image_tag partyanimal.avatar.key %>
-        <% else %>
-         <%= image_tag 'noavatar' %>
-        <% end %>
-        <div class="card-product-infos">
-          <%= link_to partyanimal.name, party_animal_path(partyanimal) %>
+<div class='containeranimals'>
+  <div class="row">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+      <% @partyanimals.each do |partyanimal| %>
+        <div class="our-team">
+          <div class="picture">
+            <%= link_to party_animal_path(partyanimal) do %>
+              <% if partyanimal.avatar.attached? %>
+                <%= cl_image_tag partyanimal.avatar.key %>
+              <% else %>
+                <%= image_tag 'noavatar' %>
+              <% end %>
+            <% end %>
+          </div>
+
+          <div class="team-content">
+            <h3 class="name"><%= partyanimal.name %></h3>
+            <h4 class="title"><%= partyanimal.main_interest %></h4>
+          </div>
+          <ul class="social">
+            <li> <%= link_to 'Click to See My Profile', party_animal_path(partyanimal) %></li>
+            <!--<li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-facebook" aria-hidden="true"></a></li>
+            <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-twitter" aria-hidden="true"></a></li>
+            <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-google-plus" aria-hidden="true"></a></li>
+            <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-linkedin" aria-hidden="true"></a></li>
+            -->
+          </ul>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
