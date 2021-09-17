@@ -22,11 +22,11 @@
 <% if user_signed_in? %>
 <div class='fancy'>
   <%= link_to "New Booking", new_party_animal_booking_path(@partyanimal), class: "button button-white button-animate" %>
-</div>
-<%= link_to "Back to Dashboard", dashboard_path(@partyanimal), class: 'btn btn-warning' %>
-<%= link_to "Back to Animal Collection", party_animals_path %>
-<%= link_to "Edit", edit_party_animal_path(@partyanimal), class: 'btn btn-success' %>
+<%= link_to "Back to Dashboard", dashboard_path(@partyanimal), class: "button button-white button-animate" %>
+<%= link_to "Back to Animal Collection", party_animals_path, class: "button button-white button-animate" %>
+<%= link_to "Edit", edit_party_animal_path(@partyanimal), class: "button button-white button-animate" %>
 <% end %>
+</div>
 </div>
 </div>
     <%#booking = Booking.find_by(user: user, partyanimal: @partyanimal) %>

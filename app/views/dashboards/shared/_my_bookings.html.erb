@@ -22,12 +22,11 @@
         </div>
 
         <div class='booking-hours'>
-          <p><%=((booking.end_time - booking.start_time) / 3600).to_i %> Hours</p>
+          <p>Partying for <%=((booking.end_time - booking.start_time) / 3600).to_i %> Hours</p>
         </div>
 
         <div class='booking-address'>
-        <p>Address</p>
-        <p><%= booking.address %></p>
+        <p>Address: <%= booking.address %></p>
         </div>
 
         <div class='booking-price'>
@@ -41,7 +40,7 @@
         </div>
       </div>
     <% end %>
-  
+
   </div>
 
   <div id="map"
@@ -51,7 +50,3 @@
   </div>
 
 </div>
-
-
-
-
