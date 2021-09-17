@@ -31,6 +31,12 @@ puts "password: 123456"
 #     partyanimal.avatar.attach(URI.open(Faker::LoremPixel.image(size: "300x300", category: 'people')), filename: 'avatar.jpg')
 #     puts partyanimal
 # end
+
+.avatar.attach(io: File.open('app/assets/images/animals/bridal/bijou.png'), filename: 'bijou.png')
+.avatar.attach(io: File.open('app/assets/images/animals/bridal/snake.png'), filename: 'snake.png')
+.avatar.attach(io: File.open('app/assets/images/animals/bridal/tom.png'), filename: 'tom.png')
+.avatar.attach(io: File.open('app/assets/images/animals/bridal/alissa.png'), filename: 'alissa.png')
+
 alissa = { name: "Alissa", age: 22, main_interest: "Dance Shows", secondary_interest: "Teaching how to dance like pro", description: "Do you wanna get everyone on the floor real fast?", price: 60, user_id: 1 }
 tom = { name: "Tom", age: 32, main_interest: "Small Talks", secondary_interest: "Networking", description: "Throwing a party full of total strangers and need an icebreaker for those early hours? You've got it!", price: 80, user_id: 1 }
 bijou = { name: "DJ Lil Bijou", age: 24, main_interest: "House, Techno and Indie Dance Mix", secondary_interest: "Cruise Ships & Private Parties", description: "Looking for a DJ that will rock the house?", price: 100, user_id: 1 }
