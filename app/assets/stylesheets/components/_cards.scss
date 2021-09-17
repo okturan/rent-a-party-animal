@@ -7,7 +7,7 @@
   align-items: center;
   padding: 10px;
   margin: 10px;
-}
+  }
 
 .card-product img {
   height: 100%;
@@ -40,6 +40,7 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 400px;
 }
 
 .card-trip > img {
