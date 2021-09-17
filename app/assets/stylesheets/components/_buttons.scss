@@ -77,8 +77,34 @@
       transform: translateY(0px);
   }
 }
-.fancy {
-  display: inline-block;
-  justify-content: space-between;
-  padding: 15px 15px;
+.fancy{
+  padding-bottom: 4vh;
+  align-self: center;
 }
+
+.fancy-item-1 {
+  margin-top: 5px;
+  position: absolute;
+  right: 75%;
+}
+
+.fancy-item-2 {
+  margin-top: 5px;
+  position: absolute;
+  right: 50%;
+}
+
+.fancy-item-3 {
+  margin-top: 5px;
+  position: absolute;
+  right: 75%;
+  bottom: -12%;
+}
+
+.fancy-item-4 {
+  margin-top: 5px;
+  position: absolute;
+  right: 50%;
+  bottom: -9%;
+}
+
