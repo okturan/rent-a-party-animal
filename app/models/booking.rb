@@ -5,6 +5,4 @@ class Booking < ApplicationRecord
   belongs_to :party_animal
 
   validates :start_time, :end_time, presence: true
-  validate :end_time_after_start_time
-
 end

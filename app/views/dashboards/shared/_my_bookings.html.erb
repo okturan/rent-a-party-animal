@@ -3,6 +3,13 @@
 
   <div class='bookings-list'>
     <% @bookings.each do |booking| %>
+      <% if booking.start_time > DateTime.now %>
+      <h3>Upcoming party</h3>
+      <% elsif booking.start_time < DateTime.now && booking.end_time > Time.now %>
+      <h3>Party in progress</h3>
+      <% elsif booking.end_time < DateTime.now %>
+      <h3>Past party</h3>
+      <% end %>
       <div class='booking-card'>
 
         <div class='booking-type' style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
