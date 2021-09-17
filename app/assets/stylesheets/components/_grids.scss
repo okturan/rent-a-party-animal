@@ -4,3 +4,10 @@
   gap: 4vmin;
   margin: 5vmin;
 }
+
+.animals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 6vmin;
+  margin: 8%;
+}
