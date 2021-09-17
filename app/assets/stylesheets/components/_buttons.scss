@@ -1,9 +1,9 @@
-// body {
-//     font-family: sans-serif;
-//     background-color: #81d4fa;
-//     font-weight: bolder;
-//     color: black;
-// }
+/*  body {
+    font-family: sans-serif;
+     background-color: #81d4fa;
+     font-weight: bolder;
+     color: black;
+ } */
 
 .text-box {
   margin-left: 44vw;
@@ -19,11 +19,14 @@
   border-radius: 100px;
   transition: all .2s;
   position: absolute;
+
 }
 
 .button:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  color: black;
 }
 
 .button:active {
@@ -73,4 +76,9 @@
       opacity: 1;
       transform: translateY(0px);
   }
+}
+.fancy {
+  display: inline-block;
+  justify-content: space-between;
+  padding: 15px 15px;
 }

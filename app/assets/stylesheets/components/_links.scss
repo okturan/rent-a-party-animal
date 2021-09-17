@@ -1,0 +1,12 @@
+.nav-tabs .nav-link {
+  color: black;
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+  background-clip: text;
+  -webkit-background-clip: text;
+
+}
+.nav-tabs .nav-link:hover {
+  color: transparent;
+  transition: 500ms ease;
+
+}
