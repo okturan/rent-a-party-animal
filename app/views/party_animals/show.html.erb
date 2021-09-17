@@ -1,5 +1,6 @@
 <div class='animal-container'>
 
+
   <div class="card-trip">
     <% if @partyanimal.avatar.attached? %>
       <%= cl_image_tag @partyanimal.avatar.key %>
@@ -8,11 +9,13 @@
     <% end %>
     <div class="card-trip-infos">
       <div>
+        
       <h1><%= @partyanimal.name %> </h1>
       <h3>Age: <%= @partyanimal.age %> </h3>
       <h5>Main Interest: <%= @partyanimal.main_interest %> </h5>
       <h5>Secondary Interest: <%= @partyanimal.secondary_interest %> </h5>
       <p> <%= @partyanimal.description %> </p>
+
       </div>
       <h2 class="card-trip-pricing"> <%= @partyanimal.price %> EUR </h2>
       <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
@@ -35,6 +38,8 @@
         </div>
     <% end %>
   </div>
+
+
 
 </div>
     <%#booking = Booking.find_by(user: user, partyanimal: @partyanimal) %>
