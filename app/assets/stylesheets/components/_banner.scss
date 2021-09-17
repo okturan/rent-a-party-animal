@@ -2,7 +2,9 @@
   background-size: cover;
   background-position: center;
   padding: 100px 0;
-  position: relative;
+  position: absolute;
+  top: 0;
+  width: 100vw;
 }
 
 .banner-logo {
@@ -13,8 +15,6 @@
 .banner-logo img {
   height: 30vh;
 }
-
-
 
 .banner h1 {
   margin: 10px 0;

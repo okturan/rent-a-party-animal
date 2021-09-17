@@ -12,9 +12,12 @@ class BookingsController < ApplicationController
     @booking.party_animal = @party_animal
     @booking.user = current_user
     @booking.total_price = total_price
-    @booking.save
+    if @booking.end_time < @booking.start_time
+    else
+      @booking.save
+    end
 
-  redirect_to dashboard_path
+    redirect_to dashboard_path
   end
 
   def destroy
