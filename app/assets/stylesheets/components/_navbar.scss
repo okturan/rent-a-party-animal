@@ -4,6 +4,7 @@
   font-size: 22px;
   position: sticky;
   top: 0;
+  font-size : clamp(16px, 2vw, 20px);
 }
 
 .navbar-home {

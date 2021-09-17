@@ -3,13 +3,7 @@
 
   <div class='bookings-list'>
     <% @bookings.each do |booking| %>
-      <% if booking.start_time > DateTime.now %>
-      <h3>Upcoming party</h3>
-      <% elsif booking.start_time < DateTime.now && booking.end_time > Time.now %>
-      <h3>Party in progress</h3>
-      <% elsif booking.end_time < DateTime.now %>
-      <h3>Past party</h3>
-      <% end %>
+
       <div class='booking-card'>
 
         <div class='booking-type' style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
@@ -22,20 +16,34 @@
         </div>
 
         <div class='booking-hours'>
-          <p>Partying for <%=((booking.end_time - booking.start_time) / 3600).to_i %> Hours</p>
+          <p>Partying for: <strong><%=((booking.end_time - booking.start_time) / 3600).to_i %></strong> Hours</p>
+        </div>
+
+        <div class='booking-between'>
+          <p>Partying between:<br> <strong><%= booking.start_time.strftime('%A, %d %b %Y %l:%M %p') %></strong> and<br> <strong><%= booking.end_time.strftime('%A, %d %b %Y %l:%M %p') %></strong> </p>
         </div>
 
         <div class='booking-address'>
-        <p>Address: <%= booking.address %></p>
+        <p>Address: <em><%= booking.address %></em></p>
         </div>
 
         <div class='booking-price'>
-          <p>Total Price: <%= booking.total_price %>€</p>
+          <p>Total Price: <strong><%= booking.total_price %>€</strong></p>
         </div>
 
         <div class='booking-actions'>
           <%= link_to booking_path(booking), method: :delete, data: { confirm: "Delete this booking from your dashboard?" } do %>
             <i class="far fa-trash-alt fa-lg"></i>
+          <% end %>
+        </div>
+
+        <div class='booking-status'>
+          <% if booking.start_time > DateTime.now %>
+            <h5 style='color: magenta'>Upcoming party</h5>
+          <% elsif booking.start_time < DateTime.now && booking.end_time > Time.now %>
+            <h5 style='color: green'>Party in progress</h5>
+          <% elsif booking.end_time < DateTime.now %>
+            <<h5 style='color: grey'>Past party</h5>
           <% end %>
         </div>
       </div>
