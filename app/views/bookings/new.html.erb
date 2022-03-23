@@ -1,4 +1,4 @@
-<div class = "container">
+<div class = "booking-container">
 
   <h1>Create a Booking for <%= link_to @party_animal.name, party_animal_path(@party_animal) %></h1>
 
@@ -8,7 +8,7 @@
 
     <%= f.input :start_time, as: :string, required: true, input_html: {class: "datepicker"} %>
     <%= f.input :end_time, as: :string, required: true, input_html: {class: "datepicker"} %>
-    <%= f.submit "Get this party started!", class: "btn btn-primary"  %>
+    <%= f.submit "Get this party started!", class: "btn btn-outline-primary btn-lg" %>
 
   <% end %>
 
