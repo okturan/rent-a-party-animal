@@ -1,6 +1,7 @@
 class PartyAnimalsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index, :show, :edit ]
-  before_action :set_party_animal, only: [ :show, :edit, :update ]
+  skip_before_action :authenticate_user!, only: [ :index, :show ]
+  before_action :set_party_animal, only: [ :show ]
+  before_action :set_owned_party_animal, only: [ :edit, :update ]
 
   def index
     @partyanimals = PartyAnimal.all
@@ -34,6 +35,10 @@ class PartyAnimalsController < ApplicationController
 
   def set_party_animal
     @partyanimal = PartyAnimal.find(params[:id])
+  end
+
+  def set_owned_party_animal
+    @partyanimal = current_user.party_animals.find(params[:id])
   end
 
 end
