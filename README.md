@@ -37,7 +37,7 @@ The current source scopes listing updates and booking deletion through `current_
 ruby script/verify_archive_contract.rb
 ```
 
-This static contract does not make the historical dependencies safe. The repository should remain unpinned and undeployed until the owner chooses either GitHub archival or a supported Ruby/Rails modernization with real model, request, and system tests plus zero critical/high dependency alerts.
+This static contract does not make the historical dependencies safe. The repository is archived, unpinned, and undeployed as a completed team project. Any future revival requires a supported Ruby/Rails stack, real model, request, and system tests, and zero critical or high dependency alerts before deployment.
 
 ## Origin
 
